@@ -1,0 +1,1 @@
+PNG_EXTERN void png_reset_crc PNGARG((png_structp png_ptr));
