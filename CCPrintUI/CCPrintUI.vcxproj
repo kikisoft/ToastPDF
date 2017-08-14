@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9C2E5051-870B-40A7-9AA1-33C5239A07B5}</ProjectGuid>
+    <RootNamespace>CCPrintUI</RootNamespace>
+    <ProjectName>TTPrintUI</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Bin\tools\pdfprinter\x86\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\tools\pdfprinter\x64\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/CCPrintUI.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\WINDDK\2600.1106\inc\w2k;..\General;.\;..\Common;..\libpng;..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STRICT;_DEBUG;DEBUG;UNICODE;_USRDLL;USERMODE_DRIVER;VERBOSE_MSG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Message>Stopping Print Spool</Message>
+      <Command>net.exe stop spooler
+if exist C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old del C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old
+if exist C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll move C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old
+</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libpngd.lib;zlibd.lib;comctl32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\Driver\$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\zlib\projects\visualc6\Win32_LIB_Debug;..\libpng\projects\visualc6\Win32_LIB_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>CCPrintUI.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <BaseAddress>0x50000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug/CCPrintUI.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Message>Starting Print Spool</Message>
+      <Command>net.exe start spooler</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/CCPrintUI.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\WINDDK\2600.1106\inc\w2k;..\General;.\;..\Common;..\libpng;..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STRICT;_DEBUG;DEBUG;UNICODE;_USRDLL;USERMODE_DRIVER;VERBOSE_MSG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Message>Stopping Print Spool</Message>
+      <Command>net.exe stop spooler
+if exist C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old del C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old
+if exist C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll move C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll C:\WINNT\system32\spool\drivers\w32x86\3\CCPrintUI.dll.old
+</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libpngd.lib;zlibd.lib;comctl32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\Driver\$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\zlib\projects\visualc6\Win32_LIB_Debug;..\libpng\projects\visualc6\Win32_LIB_Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>CCPrintUI.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <BaseAddress>0x50000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/CCPrintUI.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Message>Starting Print Spool</Message>
+      <Command>net.exe start spooler</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/CCPrintUI.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\..\WINDDK\2600.1106\inc\w2k;..\General;.\;..\Common;..\libpng;..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STRICT;NDEBUG;UNICODE;_USRDLL;USERMODE_DRIVER;_NO_CRT_STDIO_INLINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\lib\zlib.lib;..\lib\libpng.lib;comctl32.lib;wininet.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\zlib\projects\visualc6\Win32_LIB_Release;..\libpng\projects\visualc6\Win32_LIB_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>CCPrintUI.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <BaseAddress>0x50000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>..\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Release/CCPrintUI.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\..\WINDDK\2600.1106\inc\w2k;..\General;.\;..\Common;..\libpng;..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STRICT;NDEBUG;UNICODE;_USRDLL;USERMODE_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\lib\x64\zlib.lib;..\lib\x64\libpng.lib;comctl32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\zlib\projects\visualc6\Win32_LIB_Release;..\libpng\projects\visualc6\Win32_LIB_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>CCPrintUI.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol>_DllMainCRTStartup</EntryPointSymbol>
+      <BaseAddress>0x50000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>..\lib\$(TargetName).lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>
+      </ImageHasSafeExceptionHandlers>
+      <NoEntryPoint>false</NoEntryPoint>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CCLicenseLocationWnd.cpp" />
+    <ClCompile Include="dllentry.cpp" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="intrface.cpp" />
+    <ClCompile Include="LicenseInfoLoader.cpp" />
+    <ClCompile Include="oemui.cpp" />
+    <ClCompile Include="precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">precomp.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="CCPrintPropPage.cpp" />
+    <ClCompile Include="CCLicensePropPage.cpp" />
+    <ClCompile Include="CCPDFPropPage.cpp" />
+    <ClCompile Include="CCPrintUIPropPage.cpp" />
+    <ClCompile Include="CCLicenseWizard.cpp" />
+    <ClCompile Include="CCLicenseWizBasePage.cpp" />
+    <ClCompile Include="CCLicenseWizJurisdictionPage.cpp" />
+    <ClCompile Include="CCLicenseWizModificationPage.cpp" />
+    <ClCompile Include="CCLicenseWizSamplingPage.cpp" />
+    <ClCompile Include="CCLicenseWizSummeryPage.cpp" />
+    <ClCompile Include="CCLicenseWizTypePage.cpp" />
+    <ClCompile Include="CCLicenseWizUsagePage.cpp" />
+    <ClCompile Include="CCLicenseLocationDlg.cpp" />
+    <ClCompile Include="CCPrintDlg.cpp" />
+    <ClCompile Include="CCPrintProgressDlg.cpp" />
+    <ClCompile Include="..\Common\CCPrintLicenseInfo.cpp" />
+    <ClCompile Include="..\Common\CCPrintRegistry.cpp" />
+    <ClCompile Include="..\Common\CCTChar.cpp" />
+    <ClCompile Include="..\Common\debug.cpp" />
+    <ClCompile Include="..\Common\devmode.cpp" />
+    <ClCompile Include="..\Common\Helpers.cpp" />
+    <ClCompile Include="..\Common\LicenseInfo.cpp" />
+    <ClCompile Include="..\Common\XMLite.cpp" />
+    <ClCompile Include="..\General\InternetRequest.cpp" />
+    <ClCompile Include="..\General\PngImage.cpp" />
+    <ClCompile Include="..\General\ProgressInterface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCLicenseLocationWnd.h" />
+    <ClInclude Include="CCPrintUI.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="intrface.h" />
+    <ClInclude Include="LicenseInfoLoader.h" />
+    <ClInclude Include="oemui.h" />
+    <ClInclude Include="precomp.h" />
+    <ClInclude Include="CCPrintPropPage.h" />
+    <ClInclude Include="CCLicensePropPage.h" />
+    <ClInclude Include="CCPDFPropPage.h" />
+    <ClInclude Include="CCPrintUIPropPage.h" />
+    <ClInclude Include="CCLicenseWizard.h" />
+    <ClInclude Include="CCLicenseWizBasePage.h" />
+    <ClInclude Include="CCLicenseWizJurisdictionPage.h" />
+    <ClInclude Include="CCLicenseWizModificationPage.h" />
+    <ClInclude Include="CCLicenseWizSamplingPage.h" />
+    <ClInclude Include="CCLicenseWizSummeryPage.h" />
+    <ClInclude Include="CCLicenseWizTypePage.h" />
+    <ClInclude Include="CCLicenseWizUsagePage.h" />
+    <ClInclude Include="CCLicenseLocationDlg.h" />
+    <ClInclude Include="CCPrintDlg.h" />
+    <ClInclude Include="CCPrintProgressDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Common\CCCommon.h" />
+    <ClInclude Include="..\Common\CCPrintLicenseInfo.h" />
+    <ClInclude Include="..\Common\CCPrintRegistry.h" />
+    <ClInclude Include="..\Common\CCTChar.h" />
+    <ClInclude Include="..\Common\debug.h" />
+    <ClInclude Include="..\Common\devmode.h" />
+    <ClInclude Include="..\Common\Helpers.h" />
+    <ClInclude Include="..\Common\LicenseInfo.h" />
+    <ClInclude Include="..\Common\XMLite.h" />
+    <ClInclude Include="..\General\InternetRequest.h" />
+    <ClInclude Include="..\General\PngImage.h" />
+    <ClInclude Include="..\General\ProgressInterface.h" />
+    <ClInclude Include="..\libpng\png.h" />
+    <ClInclude Include="..\libpng\pngconf.h" />
+    <ClInclude Include="..\zlib\zconf.h" />
+    <ClInclude Include="..\zlib\zlib.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\compstui.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\d3dnthal.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\ddrawint.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\prcomoem.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\printoem.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\winddi.h" />
+    <ClInclude Include="..\..\..\..\WINDDK\2600.1106\inc\w2k\winddiui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCPrintUI.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\General\res\attribution.ico" />
+    <Image Include="..\General\res\cc.bmp" />
+    <Image Include="..\General\res\CC.ico" />
+    <Image Include="..\General\res\Derivative.ico" />
+    <Image Include="..\General\res\DevNations.ico" />
+    <Image Include="..\General\res\non-commercial.ico" />
+    <Image Include="..\General\res\PublicDomain.ico" />
+    <Image Include="..\General\res\Sampling.ico" />
+    <Image Include="..\General\res\SamplingPlus.ico" />
+    <Image Include="..\General\res\share_alike.ico" />
+    <Image Include="..\General\res\By.png" />
+    <Image Include="..\General\res\ByNc.png" />
+    <Image Include="..\General\res\ByNcNd.png" />
+    <Image Include="..\General\res\ByNcSa.png" />
+    <Image Include="..\General\res\ByNd.png" />
+    <Image Include="..\General\res\BySa.png" />
+    <Image Include="..\General\res\Sampling.png" />
+    <Image Include="..\General\res\SamplingPlus.png" />
+    <Image Include="..\General\res\SamplingPlusNC.png" />
+    <Image Include="..\General\res\Somerights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CCPrintUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\General\res\CC-by-nc-nd.xml" />
+    <Xml Include="..\General\res\CC-by-nc-sa.xml" />
+    <Xml Include="..\General\res\CC-by-nc.xml" />
+    <Xml Include="..\General\res\CC-by-nd.xml" />
+    <Xml Include="..\General\res\CC-by-sa.xml" />
+    <Xml Include="..\General\res\CC-by.xml" />
+    <Xml Include="..\General\res\recombo.xml" />
+    <Xml Include="..\General\res\Sampling.xml" />
+    <Xml Include="..\General\res\SamplingPlus-nc.xml" />
+    <Xml Include="..\General\res\SamplingPlus.xml" />
+    <Xml Include="..\General\res\standard.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

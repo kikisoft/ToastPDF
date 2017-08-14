@@ -1,0 +1,4 @@
+LIBRARY		NuriPSRendering
+EXPORTS
+	DllGetClassObject   PRIVATE
+    DllCanUnloadNow     PRIVATE

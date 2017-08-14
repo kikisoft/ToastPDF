@@ -1,0 +1,502 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "CompanyName", "KIKI"
+            VALUE "FileDescription", "TOAST PDF Converter Uer Interface component"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TTPDFPRNUI.dll"
+            VALUE "LegalCopyright", "?2017 KIKI Corp.  All rights reserved."
+            VALUE "OriginalFilename", "TTPDFPRNUI.dll"
+            VALUE "ProductName", "TOAST PDF Converter Uer Interface component"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LICENSE_PAGE DIALOG 0, 0, 238, 178
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "License Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,80,224,91
+    GROUPBOX        "License",IDC_STATIC,7,8,224,58
+    CONTROL         "",IDC_LICENSE_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE | WS_BORDER,13,42,16,14
+    LTEXT           "None",IDC_LICENSE,13,17,162,19
+    PUSHBUTTON      "&Change...",IDC_SELECT_LICENSE,182,17,41,14
+    CONTROL         "&Add to document properties",IDC_LICENSE_PROPERTIES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,70,103,10
+    CONTROL         "&Stamp license on document",IDC_STAMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,86,103,10
+    LTEXT           "&Location:",IDC_STATIC,15,102,30,8
+    COMBOBOX        IDC_LOCATION,56,100,106,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_LOCATION_USER,164,99,14,14
+    CONTROL         "Stamp on all &pages",IDC_STAMP_ALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,119,76,10
+    CONTROL         "Same location as the &first page",IDC_LOCATION_SAME,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,28,134,113,10
+    CONTROL         "&Different location:",IDC_LOCATION_DIFFERENT,"Button",BS_AUTORADIOBUTTON,28,147,71,10
+    COMBOBOX        IDC_LOCATION_OTHER,102,146,106,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_LOCATION_OTHER_USER,210,145,14,14
+    LTEXT           "The description of the license will be added as the last page of the document",IDC_STATIC,96,40,127,19
+END
+
+IDD_PDF_PAGE DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "PDF Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Filename:",IDC_FILENAME_LABEL,7,9,31,8
+    EDITTEXT        IDC_FILENAME,43,7,146,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,190,7,13,14
+    CONTROL         "&Automatically open the PDF file when printing is done",IDC_AUTOOPEN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,31,183,10
+END
+
+IDD_PROGRESS DIALOG 0, 0, 186, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Retrieving Data..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,71,57,50,14
+    CTEXT           "CCPDFConverter is retrieving data from the internet.\nPress <Cancel> to stop and use the cached data",IDC_STATIC,7,7,172,22
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,33,172,14
+END
+
+IDD_LICENSEPAGE_JURISDICTION DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Jurisdiction"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Generic",IDC_GENERAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,40,10
+    CONTROL         "&Specific:",IDC_SPECIFIC,"Button",BS_AUTORADIOBUTTON,7,23,43,10
+    COMBOBOX        IDC_JURISDICTION,53,21,150,89,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY
+END
+
+IDD_LICENSEPAGE_TYPE DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "License Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Creative Commons",IDC_LICENSE_CC,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,76,10
+    CONTROL         "&Sampling",IDC_LICENSE_SAMPLING,"Button",BS_AUTORADIOBUTTON,7,18,44,10
+    CONTROL         "&Public Domain",IDC_LICENSE_PD,"Button",BS_AUTORADIOBUTTON,7,29,77,10
+    CONTROL         "N&one",IDC_LICENSE_NONE,"Button",BS_AUTORADIOBUTTON,7,40,33,10
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY
+END
+
+IDD_LICENSEPAGE_MODIFICATION DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Modification"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Yes",IDC_DERIVATIVE_ALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,27,10
+    CONTROL         "Yes, With &Share Alike",IDC_DERIVATIVE_SHARE,"Button",BS_AUTORADIOBUTTON,7,23,84,10
+    CONTROL         "N&o",IDC_DERIVATIVE_NO,"Button",BS_AUTORADIOBUTTON,7,39,25,10
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY
+END
+
+IDD_LICENSEPAGE_SAMPLING DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Sampling"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Sampling",IDC_SAMPLING,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,44,10
+    CONTROL         "Sampling &Plus",IDC_SAMPLING_PLUS,"Button",BS_AUTORADIOBUTTON,7,23,77,10
+    CONTROL         "&Noncommercial Sampling Plus",IDC_SAMPLING_NC,"Button",BS_AUTORADIOBUTTON,7,39,108,10
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY
+END
+
+IDD_LICENSEPAGE_SUMMERY DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "License Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            ID_SEPARATOR,IDC_ICON1,65,11,20,20,NOT WS_VISIBLE | WS_TABSTOP
+    ICON            ID_SEPARATOR,IDC_ICON2,93,11,20,20,NOT WS_VISIBLE
+    ICON            ID_SEPARATOR,IDC_ICON3,121,11,20,20,NOT WS_VISIBLE
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+IDD_LICENSEPAGE_USAGE DIALOG 0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Usage"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Yes",IDC_COMMERICAL_YES,"Button",BS_AUTORADIOBUTTON,7,7,27,10
+    CONTROL         "&No",IDC_COMMERICAL_NO,"Button",BS_AUTORADIOBUTTON,7,22,25,10
+    EDITTEXT        IDC_DESCRIPTION,7,69,196,78,ES_MULTILINE | ES_READONLY
+END
+
+IDD_LICENSE_LOCATION DIALOG 0, 0, 155, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "License Location"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&X:",IDC_STATIC,7,9,8,8
+    EDITTEXT        IDC_X,20,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "&Y:",IDC_STATIC,68,9,8,8
+    EDITTEXT        IDC_Y,81,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,87,178,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,19,178,50,14
+    CONTROL         "",IDC_PLACEHOLDER,"Button",BS_OWNERDRAW | BS_FLAT | NOT WS_VISIBLE,7,29,141,141
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_LICENSE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_PDF_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_LICENSEPAGE_JURISDICTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSEPAGE_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSEPAGE_MODIFICATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSEPAGE_SAMPLING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSEPAGE_SUMMERY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSEPAGE_USAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LICENSE_LOCATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LICENSE_PAGE DLGINIT
+BEGIN
+    IDC_LOCATION, 0x403, 4, 0
+0x6f54, 0x0070, 
+    IDC_LOCATION, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    IDC_LOCATION, 0x403, 13, 0
+0x7355, 0x7265, 0x6420, 0x6665, 0x6e69, 0x6465, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// XML
+//
+
+IDX_CC_BY               XML                     "..\\General\\res\\CC-by.xml"
+
+IDX_CC_BY_NC            XML                     "..\\General\\res\\CC-by-nc.xml"
+
+IDX_CC_BY_NC_ND         XML                     "..\\General\\res\\CC-by-nc-nd.xml"
+
+IDX_CC_BY_NC_SA         XML                     "..\\General\\res\\CC-by-nc-sa.xml"
+
+IDX_CC_BY_ND            XML                     "..\\General\\res\\CC-by-nd.xml"
+
+IDX_CC_BY_SA            XML                     "..\\General\\res\\CC-by-sa.xml"
+
+IDX_RECOMBO             XML                     "..\\General\\res\\recombo.xml"
+
+IDX_SAMPLING            XML                     "..\\General\\res\\Sampling.xml"
+
+IDX_SAMPLING_PLUS       XML                     "..\\General\\res\\SamplingPlus.xml"
+
+IDX_SAMPLING_PLUS_NC    XML                     "..\\General\\res\\SamplingPlus-nc.xml"
+
+IDX_STANDARD            XML                     "..\\General\\res\\standard.xml"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ATTRIBUTION         ICON                    "..\\General\\res\\attribution.ico"
+
+IDI_CC                  ICON                    "..\\General\\res\\CC.ico"
+
+IDI_COMMERCIAL_NO       ICON                    "..\\General\\res\\non-commercial.ico"
+
+IDI_DERIVATIVE_NO       ICON                    "..\\General\\res\\Derivative.ico"
+
+IDI_DEVELOPINGNATIONS   ICON                    "..\\General\\res\\DevNations.ico"
+
+IDI_PUBLICDOMAIN        ICON                    "..\\General\\res\\PublicDomain.ico"
+
+IDI_SAMPLING            ICON                    "..\\General\\res\\Sampling.ico"
+
+IDI_SAMPLING_PLUS       ICON                    "..\\General\\res\\SamplingPlus.ico"
+
+IDI_SHAREALIKE          ICON                    "..\\General\\res\\share_alike.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CC                  BITMAP                  "..\\general\\res\\cc.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDPNG_SAMPLING_PLUS_NC  PNG                     "..\\General\\res\\SamplingPlusNC.png"
+
+IDPNG_BY_NC             PNG                     "..\\General\\res\\ByNc.png"
+
+IDPNG_BY_NC_ND          PNG                     "..\\General\\res\\ByNcNd.png"
+
+IDPNG_BY_NC_SA          PNG                     "..\\General\\res\\ByNcSa.png"
+
+IDPNG_BY_ND             PNG                     "..\\General\\res\\ByNd.png"
+
+IDPNG_BY_SA             PNG                     "..\\General\\res\\BySa.png"
+
+IDPNG_SAMPLING          PNG                     "..\\General\\res\\Sampling.png"
+
+IDPNG_SAMPLING_PLUS     PNG                     "..\\General\\res\\SamplingPlus.png"
+
+IDPNG_BY                PNG                     "..\\General\\res\\By.png"
+
+IDPNG_SOMERIGHTS        PNG                     "..\\General\\res\\Somerights.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_AUTOOPEN            "Automatically open the PDF file when printing is done"
+    IDS_NAME                "CC PDF Printer"
+    IDS_LICENSELOCATION_TOP "Top"
+    IDS_LICENSELOCATION_BOTTOM "Bottom"
+    IDS_LICENSELOCATION_USER "User Defined"
+    IDS_DESCRIPTION_CC      "With a Creative Commons license, you keep your copyright but allow people to copy and distribute your work provided they give you credit -- and only on the conditions you specify here"
+    IDS_DESCRIPTION_SAMPING "The Sampling licenses let you invite other people to use a part of your work and make it new"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DESCRIPTION_PUBLIC  "To offer your work with no conditions, choose the public domain"
+    IDS_DESCRIPTION_DEVNATIONS 
+                            "The Developing Nations license allows you to invite a wide range of royalty-free uses of your work in developing nations while retaining your full copyright in the developed world"
+    IDS_DESCRIPTION_NONE    "Select this option if you do not want to specify any license"
+    IDS_DESCRIPTION_GENERAL "Select the license type to get a detailed description about it"
+    IDS_DESCRIPTION_CC_BY_NC 
+                            "Attribution Non-commercial (by-nc)\r\nThis license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don't have to license their derivative works on the same terms."
+    IDS_DESCRIPTION_CC_BY_NC_SA 
+                            "Attribution Non-commercial Share Alike (by-nc-sa)\r\nThis license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms. Others can download and redistribute your work just like the by-nc-nd license, but they can also translate, make remixes, and produce new stories based on your work. All new work based on yours will carry the same license, so any derivatives will also be non-commercial in nature."
+    IDS_DESCRIPTION_CC_BY_NC_ND 
+                            "Attribution Non-commercial No Derivatives (by-nc-nd)\r\nThis license is the most restrictive of the Creative Commons six main licenses, allowing redistribution. This license is often called the ""free advertising"" license because it allows others to download your works and share them with others as long as they mention you and link back to you, but they can't change them in any way or use them commercially."
+    IDS_DESCRIPTION_CC_BY   "Attribution (by)\r\nThis license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered, in terms of what others can do with your works licensed under Attribution."
+    IDS_DESCRIPTION_CC_BY_SA 
+                            "Attribution Share Alike (by-sa)\r\nThis license lets others remix, tweak, and build upon your work even for commercial reasons, as long as they credit you and license their new creations under the identical terms. This license is often compared to open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use."
+    IDS_DESCRIPTION_CC_BY_ND 
+                            "Attribution No Derivatives (by-nd)\r\nThis license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to you."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DESCRIPTION_SAMPLING_REGULAR 
+                            "Creative Commons Sampling\r\nPeople can take and transform pieces of your work for any purpose other than advertising, which is prohibited. Copying and distribution of the entire work is also prohibited."
+    IDS_DESCRIPTION_SAMPLING_PLUS 
+                            "Creative Commons Sampling Plus\r\nPeople can take and transform pieces of your work for any purpose other than advertising, which is prohibited. Noncommercial copying and distribution (like file-sharing) of the entire work are also allowed. Hence, ""plus""."
+    IDS_DESCRIPTION_SAMPLING_PLUS_NC 
+                            "Creative Commons Noncommercial Sampling Plus:\r\nPeople can take and transform pieces of your work for noncommercial purposes only. Noncommercial copying and distribution (like file-sharing) of the entire work are also allowed."
+    IDS_DESCRIPTION_JURISDICTION_ADD 
+                            "\r\nThe license will be governed by the Copyright Law of "
+    IDS_DESCRIPTION_PUBLIC_FINAL 
+                            "You have selected the Public Domain Dedication. Please note that the Public Domain Dedication may not be valid outside of the United States.\r\nPressing the 'Finish' button will open a page in which you can enter information about the work so it can be put in the public domain."
+    IDS_DESCRIPTION_DEVNATIONS_FINAL 
+                            "The Developing Nations license allows, for the first time, any copyright holder in the world to participate first-hand in reforming global information policy. The fact is that most of the world's population is simply priced out of developed nations' publishing output. To authors, that means an untapped readership. To economists, it means ""deadweight loss."" To human rights advocates and educators, it is a tragedy. The Developing Nations license is designed to address all three concerns"
+    IDS_DESCRIPTION_NONE_FINAL 
+                            "You have selected to remove the license information from the work"
+    IDS_TITLE_LICENSE_TYPE  "Select license type"
+    IDS_TITLE_LICENSE_USAGE "Allow commerical use of your work?"
+    IDS_TITLE_LICENSE_MODIFICATION "Allow modifications of your work?"
+    IDS_TITLE_LICENSE_JURISDICTION "Jurisdiction of Your License:"
+    IDS_TITLE_LICENSE_SAMPLING "What flavor of Sampling license?"
+    IDS_TITLE_LICENSE_SUMMERY "License Summery and Explanation"
+    IDS_WARNING_USERCANCEL  "Canceled by user; using cached data"
+    IDS_ERROR_RETRIEVEDATA_JURISDICTION 
+                            "Error while retrieving the license information from the Creative Commons site.\nThe license will be created using cached data.\nNote that the selected jurisdiction will not be used"
+    IDS_ERROR_RETRIEVEDATA  "Error while retrieving the license information from the Creative Commons site.\nThe license will be created using cached data"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_WARNING_USERCANCEL_JURISDICTION 
+                            "Canceled by user; using cached data\nNote that the selected jurisdiction will not be used"
+    IDS_ERROR_RETRIEVEDATA_SHORT "Error while retrieving license data"
+    IDS_ERROR_RETRIEVELICENSE "Error while retrieving license"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

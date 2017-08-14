@@ -1,0 +1,4 @@
+LIBRARY        NuriPrintUI
+EXPORTS        
+			   DllGetClassObject   PRIVATE
+               DllCanUnloadNow     PRIVATE
