@@ -2,7 +2,7 @@
 
 ToastPDF is a program that converts documents to PDF.
 
-ToastPDF was used by modifying <a href="https://github.com/ARLM-Keller/cc-pdf-converter">CC PDF Converter</a> open source.
+ToastPDF was used by modifying open-sourced <a href="https://github.com/ARLM-Keller/cc-pdf-converter">CC PDF Converter</a>.
 
 # Requirements
 Ghostscript See: https://github.com/ArtifexSoftware/ghostpdl-downloads
